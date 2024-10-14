@@ -16,7 +16,7 @@
 }
 
 .book-container header span strong {
-    color: #251fc5;
+    color: #00BFFF;
 }
 
 .book-container header img {
@@ -40,7 +40,7 @@
 }
 
 .book-container header button:hover {
-    border-color: #251fc5;
+    border-color: #00BFFF;
 }
 
 .book-container h1 {
