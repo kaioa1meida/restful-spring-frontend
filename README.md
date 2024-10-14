@@ -1,70 +1,83 @@
-# Spring Restfull Frontend
+# Restful Spring Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é um projeto de frontend construído usando Node.js e React, projetado para interagir com uma API  de Livros em Spring Boot. Ele oferece uma interface amigável para consumir os endpoints da API e exibir os resultados em uma interface bem estruturada.
 
-## Available Scripts
+## Índice
 
-In the project directory, you can run:
+- [Configuração do Projeto](#configuração-do-projeto)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Scripts Disponíveis](#scripts-disponíveis)
+- [Integração com a API](#integração-com-a-api)
+- [Contribuindo](#contribuindo)
+- [Licença](#licença)
 
-### `npm start`
+## Configuração do Projeto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Para começar com o projeto, siga os passos abaixo:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/kaioa1meida/restful-spring-frontend
+   ```
 
-### `npm test`
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd restful-spring-frontend
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-### `npm run build`
+4. Execute o servidor de desenvolvimento:
+   ```bash
+   npm start
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A aplicação será executada em [http://localhost:3000](http://localhost:3000).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tecnologias Utilizadas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Node.js**: Backend para gerenciar dependências e executar o servidor de desenvolvimento.
+- **React**: Biblioteca de frontend para construir interfaces de usuário interativas.
+- **Axios**: Para fazer requisições HTTP para a API RESTful em Spring Boot.
+- **CSS**: Para estilizar a aplicação.
 
-### `npm run eject`
+## Scripts Disponíveis
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+No diretório do projeto, você pode executar:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `npm start`: Executa o app no modo de desenvolvimento.
+- `npm run build`: Cria o app para produção.
+- `npm test`: Executa o conjunto de testes.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Integração com a API
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Este frontend foi projetado para interagir com uma API RESTful em Spring Boot o backend dela está disponível em: https://github.com/kaioa1meida/restful-spring-kotlin. Você pode configurar a URL base da API no arquivo `src/services/api.js`.
 
-## Learn More
+```js
+import axios from 'axios';
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+const api = axios.create({
+  baseURL: 'http://localhost:8080/api',
+});
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+export default api;
+```
 
-### Code Splitting
+Certifique-se de que o backend em Spring Boot esteja rodando na porta correta (a padrão é `8080`) e fornecendo os endpoints necessários.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contribuindo
 
-### Analyzing the Bundle Size
+Contribuições são bem-vindas! Se você quiser contribuir para este projeto, fique à vontade para abrir uma issue ou enviar um pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Faça um fork do projeto.
+2. Crie sua branch de feature (`git checkout -b feature/minha-feature`).
+3. Commit suas mudanças (`git commit -m 'Adiciona minha feature'`).
+4. Faça o push para a branch (`git push origin feature/minha-feature`).
+5. Abra um pull request.
 
-### Making a Progressive Web App
+## Licença
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
