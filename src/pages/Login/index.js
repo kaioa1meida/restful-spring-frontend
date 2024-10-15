@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import api from '../../services/api'
 
 import './styles.css';
-import logoImage from '../../assets/star.svg'
+import logoImage from '../../assets/star.png'
 
 export default function Login() {
 
